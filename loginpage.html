@@ -10,7 +10,16 @@ if (!empty($_POST['login'])) {
 
    $result = mysqli_query($conn, $query);
    $count = mysqli_num_rows($result);
+   
+   if ($count>0) {
+      
+    header('location:http://why-a.ga/');     
+   } 
+   else {
+    $error[] ='username or password is incorrect';
+   }
 
+}
    
 ?>
 
